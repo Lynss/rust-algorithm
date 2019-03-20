@@ -4,7 +4,9 @@
 //mod playing_digits;
 //mod diophantine_equation;
 //mod your_order;
-mod consecutive_fib;
+//mod consecutive_fib;
+mod move_square;
+
 fn main() {
     //    let test = String::from("a.L.R...LR..L..");
     //    println!("{}", push_dominoes::push_dominoes(test));
@@ -27,4 +29,6 @@ fn main() {
 
     //    let prod = 714;
     //    println!("{:?}", consecutive_fib::product_fib(prod));
+
+    move_square::print_ms_result();
 }
