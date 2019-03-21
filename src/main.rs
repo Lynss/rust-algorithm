@@ -5,7 +5,9 @@
 //mod diophantine_equation;
 //mod your_order;
 //mod consecutive_fib;
-mod move_square;
+//mod move_square;
+//mod algebraic_list;
+//use algebraic_list::{Cons};
 
 fn main() {
     //    let test = String::from("a.L.R...LR..L..");
@@ -30,5 +32,10 @@ fn main() {
     //    let prod = 714;
     //    println!("{:?}", consecutive_fib::product_fib(prod));
 
-    move_square::print_ms_result();
+    //    move_square::print_ms_result();
+
+    //    let vec =vec![1, 2, 3, 4, 5];
+    //    println!("{:?}", Cons::from_iter(vec.clone()).to_vec());
+    //    println!("{:?}", Cons::from_iter(vec.clone()).filter(|&a|a>3).to_vec());
+    //    println!("{:?}", Cons::from_iter(vec.clone()).map(|a|a+3).to_vec());
 }
