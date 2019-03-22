@@ -9,6 +9,8 @@
 //mod algebraic_list;
 //use algebraic_list::{Cons};
 
+use std::collections::{HashMap, HashSet};
+
 fn main() {
     //    let test = String::from("a.L.R...LR..L..");
     //    println!("{}", push_dominoes::push_dominoes(test));
@@ -38,4 +40,36 @@ fn main() {
     //    println!("{:?}", Cons::from_iter(vec.clone()).to_vec());
     //    println!("{:?}", Cons::from_iter(vec.clone()).filter(|&a|a>3).to_vec());
     //    println!("{:?}", Cons::from_iter(vec.clone()).map(|a|a+3).to_vec());
+
+    let test = vec![
+        ['t', 'u', 'p'],
+        ['w', 'h', 'i'],
+        ['t', 's', 'u'],
+        ['a', 't', 's'],
+        ['h', 'a', 'p'],
+        ['t', 'i', 's'],
+        ['w', 'h', 's']];
+    fn recover_secret(triplets: Vec<[char; 3]>) -> String {
+        let mut markers: HashMap<char, HashSet<char>> = HashMap::new();
+        triplets.iter().for_each(|t| {
+            markers.entry(t[0]).or_insert(HashSet::new()).extend(&t[1..3]);
+            markers.entry(t[1]).or_insert(HashSet::new()).extend(&t[2..3]);
+        });
+        let mut rev_result= vec![];
+        while !markers.is_empty() {
+            for (ref c, ref mut hs) in &markers {
+                if hs.is_empty() {
+                    rev_result.push(c.clone());
+                    markers.remove(c);
+                    markers.values().for_each(|mut h| {
+                        h.remove(c);
+                    });
+                }
+            }
+        };
+        rev_result.iter().for_each(|a| println!("{}",a));
+//        String::from_iter(rev_result.iter().rev())
+        "123".to_owned()
+    }
+    println!("{}", recover_secret(test));
 }
