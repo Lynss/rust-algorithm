@@ -50,6 +50,7 @@ fn main() {
     let s1 = "Program title: Primes\nAuthor: Kern\nCorporation: Gold\nPhone: +1-503-555-0091\nDate: Tues April 9, 2005\nVersion: 6.7\nLevel: Alpha";
     fn change(s: &str, prog: &str, version: &str) -> String {
         let version = format!(" {}", version).to_owned();
+        let prog = format!(" {}", prog).to_owned();
         let mut initial = s
             .split('\n')
             .map(|item| {
@@ -60,17 +61,15 @@ fn main() {
                 }
             })
             .collect::<HashMap<&str, &str>>();
-        dbg!(initial["Phone"].trim());
-        let phone_regex = Regex::new(r"^\+1-\d{3}-\d{3}-d{4}$").unwrap();
+
+        let phone_regex = Regex::new(r"^\+1-\d{3}-\d{3}-\d{4}$").unwrap();
         let version_regex = Regex::new(r"^\d+\.\d+$").unwrap();
-        dbg!(phone_regex.is_match(initial["Phone"].trim()));
-        dbg!(version_regex.is_match(initial["Version"].trim()));
         if !phone_regex.is_match(initial["Phone"].trim()) || !version_regex.is_match(initial["Version"].trim()) {
             return "ERROR: VERSION or PHONE".into();
         };
         initial.entry("Version").and_modify(|n| {
-            let nn = n.parse::<f64>().unwrap();
-            if nn > 2.0 {
+            let nn = n.trim().parse::<f64>().unwrap();
+            if nn != 2.0 {
                 *n = version.as_str();
             };
         });
@@ -80,10 +79,10 @@ fn main() {
         initial.entry("Author").and_modify(|p| {
             *p = " g964";
         });
-        initial.entry("date").and_modify(|p| {
+        initial.entry("Date").and_modify(|p| {
             *p = " 2019-01-01";
         });
-        initial.entry("Program").or_insert(prog);
+        initial.entry("Program").or_insert(prog.as_str());
         initial.remove("Corporation");
         initial.remove("Level");
         format!(
@@ -94,6 +93,21 @@ fn main() {
             initial["Date"],
             initial["Version"]
         )
+    }
+    fn change(s: &str, prog: &str, version: &str) -> String {
+        let re1 = Regex::new(r"Version: (?P<Version>\d+\.\d+)\n").unwrap();
+        let cv = re1.captures(s);
+        let re2 = Regex::new(r"Phone: (?P<Phone>\+1-\d{3}-\d{3}-\d{4})\n").unwrap();
+        let cp = re2.captures(s);
+        if cv.is_none() || cp.is_none() {
+            return "ERROR: VERSION or PHONE".to_string();
+        }
+        let mut v = version; let p = "+1-503-555-0090";
+        let text1 = cv.unwrap().name(&"Version").map_or("", |m| m.as_str());
+        if text1 == "2.0" {
+            v = "2.0";
+        }
+        return format!( "Program: {} Author: g964 Phone: {} Date: 2019-01-01 Version: {}", prog, p, v);
     }
     dbg!(
         change(s1, "Ladder", " 1.1")
