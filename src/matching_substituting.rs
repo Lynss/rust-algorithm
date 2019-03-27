@@ -1,8 +1,6 @@
 use regex::Regex;
 use std::collections::HashMap;
 
-
-
 fn my_change(s: &str, prog: &str, version: &str) -> String {
     let version = format!(" {}", version).to_owned();
     let prog = format!(" {}", prog).to_owned();
@@ -19,7 +17,9 @@ fn my_change(s: &str, prog: &str, version: &str) -> String {
 
     let phone_regex = Regex::new(r"^\+1-\d{3}-\d{3}-\d{4}$").unwrap();
     let version_regex = Regex::new(r"^\d+\.\d+$").unwrap();
-    if !phone_regex.is_match(initial["Phone"].trim()) || !version_regex.is_match(initial["Version"].trim()) {
+    if !phone_regex.is_match(initial["Phone"].trim())
+        || !version_regex.is_match(initial["Version"].trim())
+    {
         return "ERROR: VERSION or PHONE".into();
     };
     initial.entry("Version").and_modify(|n| {
@@ -66,9 +66,7 @@ fn change(s: &str, prog: &str, version: &str) -> String {
     return format!( "Program: {} Author: g964 Phone: {} Date: 2019-01-01 Version: {}", prog, p, v);
 }
 
-pub fn ms_print_change(){
+pub fn ms_print_change() {
     let s1 = "Program title: Primes\nAuthor: Kern\nCorporation: Gold\nPhone: +1-503-555-0091\nDate: Tues April 9, 2005\nVersion: 6.7\nLevel: Alpha";
-    dbg!(
-        change(s1, "Ladder", " 1.1")
-    );
+    dbg!(change(s1, "Ladder", " 1.1"));
 }

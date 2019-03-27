@@ -1,5 +1,4 @@
 extern crate regex;
-
 //mod push_dominoes;
 //mod first_unique_character;
 //mod give_diamond;
@@ -11,7 +10,8 @@ extern crate regex;
 //mod algebraic_list;
 //use algebraic_list::{Cons};
 //mod recover_secret;
-mod matching_substituting;
+//mod matching_substituting;
+mod sum_pairs;
 
 fn main() {
     //    let test = String::from("a.L.R...LR..L..");
@@ -44,5 +44,7 @@ fn main() {
     //    println!("{:?}", Cons::from_iter(vec.clone()).map(|a|a+3).to_vec());
 
     //    recover_secret::rs_print();
-    matching_substituting::ms_print_change();
+    //    matching_substituting::ms_print_change();
+
+    sum_pairs::print_sum_pairs();
 }
