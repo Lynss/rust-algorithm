@@ -1,10 +1,5 @@
 /target
 **/*.rs.bk
 /.idea
-<<<<<<< HEAD
 /.history
 /.vscode
-=======
-/.vscode
-/.history
->>>>>>> 迁移至vscode
