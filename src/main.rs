@@ -1,4 +1,5 @@
 extern crate regex;
+
 //mod push_dominoes;
 //mod first_unique_character;
 //mod give_diamond;
@@ -46,5 +47,6 @@ fn main() {
     //    recover_secret::rs_print();
     //    matching_substituting::ms_print_change();
 
-        sum_pairs::print_sum_pairs();
+    sum_pairs::print_sum_pairs();
+
 }
