@@ -1,6 +1,5 @@
-
 use std::collections::HashMap;
-fn produce_sum(n:i64)->i64{
+fn produce_sum(n: i64) -> i64 {
     let sqrt = (n as f64).sqrt() as i64 + 1;
     let mut temp_vec: Vec<i64> = vec![];
     (2..sqrt).for_each(|m| {
@@ -44,5 +43,5 @@ fn dotest(start: i64, limit: i64, exp: Option<(i64, i64)>) -> () {
 
 #[test]
 fn basic_tests() {
-    dotest(5339, 7733,  Some((5775, 6128)));
+    dotest(5339, 7733, Some((5775, 6128)));
 }
