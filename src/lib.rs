@@ -1,9 +1,9 @@
 mod buddy;
-
 #[macro_use]
 mod macros;
-
-pub mod help_your_granny;
+mod help_your_granny;
+mod bleatrix_trotter;
+mod last_digit;
 
 #[cfg(test)]
 mod tests {}
