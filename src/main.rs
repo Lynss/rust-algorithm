@@ -1,5 +1,3 @@
-extern crate regex;
-
 //mod push_dominoes;
 //mod first_unique_character;
 //mod give_diamond;
