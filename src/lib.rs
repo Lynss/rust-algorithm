@@ -10,6 +10,8 @@ mod last_digit;
 mod candy;
 mod add_two_numbers;
 mod masking_personal_information;
+mod repeated_times;
+mod max_subarray_sum_circular;
 
 #[cfg(test)]
 mod tests {}
