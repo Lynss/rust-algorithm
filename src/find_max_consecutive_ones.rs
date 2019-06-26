@@ -16,8 +16,6 @@ pub fn find_max_consecutive_ones(nums: Vec<i32>) -> i32 {
 #[cfg(test)]
 mod test {
     use super::*;
-    use std::rc::Rc;
-    use std::cell::RefCell;
 
     #[test]
     fn test_find_max_consecutive_ones() {
