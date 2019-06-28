@@ -39,6 +39,7 @@ mod max_subarray_sum_circular;
 mod find_max_consecutive_ones;
 mod delete_node;
 mod min_distance;
+mod fraction_addition;
 
 #[cfg(test)]
 mod tests {}
