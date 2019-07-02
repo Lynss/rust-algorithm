@@ -11,13 +11,9 @@ pub fn add_two_numbers(
     let produce_stack = move |l: Option<Box<ListNode>>| {
         let mut result = vec![];
         let mut temp = l;
-        loop {
-            if let Some(box ListNode { val, next }) = temp {
-                result.push(val);
-                temp = next;
-            } else {
-                break;
-            }
+        while let Some(box ListNode { val, next }) = temp {
+            result.push(val);
+            temp = next;
         }
         result
     };

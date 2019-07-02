@@ -41,6 +41,7 @@ mod delete_node;
 mod min_distance;
 mod fraction_addition;
 mod find_min;
+mod permute;
 
 #[cfg(test)]
 mod tests {}
