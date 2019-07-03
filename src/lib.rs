@@ -42,6 +42,7 @@ mod min_distance;
 mod fraction_addition;
 mod find_min;
 mod permute;
+mod recent_counter;
 
 #[cfg(test)]
 mod tests {}

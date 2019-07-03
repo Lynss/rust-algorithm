@@ -13,7 +13,6 @@ pub fn permute(nums: Vec<i32>) -> Vec<Vec<i32>> {
         (0..len+1).for_each(|i|{
             let mut num = num.clone();
             num.insert(i,head);
-            dbg!(&num);
             result.push(num);
         });
     }
