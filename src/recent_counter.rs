@@ -26,8 +26,3 @@ impl RecentCounter {
     }
 }
 
-/**
- * Your RecentCounter object will be instantiated and called as such:
- * let obj = RecentCounter::new();
- * let ret_1: i32 = obj.ping(t);
- */

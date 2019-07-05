@@ -43,6 +43,7 @@ mod fraction_addition;
 mod find_min;
 mod permute;
 mod recent_counter;
+mod string_compress;
 
 #[cfg(test)]
 mod tests {}
