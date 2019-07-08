@@ -44,6 +44,7 @@ mod find_min;
 mod permute;
 mod recent_counter;
 mod string_compress;
+mod flipgame;
 
 #[cfg(test)]
 mod tests {}
