@@ -45,6 +45,7 @@ mod permute;
 mod recent_counter;
 mod string_compress;
 mod flipgame;
+mod is_valid;
 
 #[cfg(test)]
 mod tests {}
