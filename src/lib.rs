@@ -1,5 +1,6 @@
 #![feature(box_patterns)]
-
+#![feature(is_sorted)]
+#![feature(toowned_clone_into)]
 // Definition for a binary tree node.
  #[derive(Debug, PartialEq, Eq)]
  pub struct TreeNode {
@@ -46,6 +47,8 @@ mod recent_counter;
 mod string_compress;
 mod flipgame;
 mod is_valid;
+mod is_alien_sorted;
+mod num_tile_possibilities;
 
 #[cfg(test)]
 mod tests {}
