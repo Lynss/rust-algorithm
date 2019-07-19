@@ -49,6 +49,7 @@ mod flipgame;
 mod is_valid;
 mod is_alien_sorted;
 mod num_tile_possibilities;
+mod count_arrangement;
 
 #[cfg(test)]
 mod tests {}
