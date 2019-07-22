@@ -50,6 +50,7 @@ mod is_valid;
 mod is_alien_sorted;
 mod num_tile_possibilities;
 mod count_arrangement;
+mod broken_calc;
 
 #[cfg(test)]
 mod tests {}
