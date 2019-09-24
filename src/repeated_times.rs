@@ -6,12 +6,12 @@ use std::collections::HashMap;
 pub fn repeated_n_times(a: Vec<i32>) -> i32 {
     let length = a.len();
     let n = length / 2;
-    let mut found = -1 ;
+    let mut found = -1;
     let mut result_map = HashMap::new();
     for i in a {
         let count = result_map.entry(i).or_insert(0);
         *count += 1;
-        if *count == n{
+        if *count == n {
             found = i;
             break;
         }

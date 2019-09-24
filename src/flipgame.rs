@@ -14,16 +14,8 @@ pub fn flipgame(fronts: Vec<i32>, backs: Vec<i32>) -> i32 {
         };
     });
     satisifies.iter().fold(0, |acc, &(front, back)| {
-        let front = if not.contains(&front) {
-            2001
-        } else {
-            front
-        };
-        let back = if not.contains(&back) {
-            2001
-        } else {
-            back
-        };
+        let front = if not.contains(&front) { 2001 } else { front };
+        let back = if not.contains(&back) { 2001 } else { back };
         let min = cmp::min(back, front);
         if min == 2001 {
             acc

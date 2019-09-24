@@ -21,7 +21,7 @@ pub fn delete_node(root: Option<Rc<RefCell<TreeNode>>>, key: i32) -> Option<Rc<R
                     let mut max_val = max.borrow().val;
                     while max.borrow().right.is_some() {
                         let node = max.clone();
-                        let node =node.borrow();
+                        let node = node.borrow();
                         max = node.right.as_ref().unwrap().clone();
                         max_val = max.borrow().val;
                     }
@@ -64,7 +64,7 @@ mod tests {
             left: Some(Rc::new(RefCell::new(TreeNode {
                 val: 1,
                 left: None,
-                right: None
+                right: None,
             }))),
             right: Some(Rc::new(RefCell::new(TreeNode {
                 val: 4,

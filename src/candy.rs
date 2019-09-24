@@ -31,13 +31,13 @@ pub fn candy(ratings: Vec<i32>) -> i32 {
     let range = ratings.len();
     let mut result = vec![1; range];
     (1..range).for_each(|index| {
-        if ratings[index] > ratings[index - 1]{
+        if ratings[index] > ratings[index - 1] {
             result[index] = result[index - 1] + 1;
         }
     });
-    (0..range-1).rev().for_each(|index| {
-        if ratings[index] > ratings[index + 1]{
-            result[index] = max(result[index + 1]+1,result[index])
+    (0..range - 1).rev().for_each(|index| {
+        if ratings[index] > ratings[index + 1] {
+            result[index] = max(result[index + 1] + 1, result[index])
         }
     });
     result.iter().sum()

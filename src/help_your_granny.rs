@@ -1,8 +1,13 @@
 use std::collections::HashMap;
 
 fn tour(frnds: &[&str], fr_twns: HashMap<&str, &str>, dist: HashMap<&str, f64>) -> i32 {
-    let length = fr_twns.iter().filter(|(key,_)|{frnds.contains(key)}).collect::<Vec<_>>().len();
-    let initial_distance = dist[fr_twns[frnds[0]]] + dist.get(fr_twns[frnds[length-1]]).unwrap_or(&0f64);
+    let length = fr_twns
+        .iter()
+        .filter(|(key, _)| frnds.contains(key))
+        .collect::<Vec<_>>()
+        .len();
+    let initial_distance =
+        dist[fr_twns[frnds[0]]] + dist.get(fr_twns[frnds[length - 1]]).unwrap_or(&0f64);
     (1..length).fold(initial_distance, |acc, index| {
         let current_town = fr_twns[frnds[index]];
         let direct_distance = dist[current_town];
@@ -14,7 +19,12 @@ fn tour(frnds: &[&str], fr_twns: HashMap<&str, &str>, dist: HashMap<&str, f64>) 
     }) as i32
 }
 
-pub fn testing(frnds: &[&str], fr_twns: HashMap<&str, &str>, dist: HashMap<&str, f64>, exp: i32) -> () {
+pub fn testing(
+    frnds: &[&str],
+    fr_twns: HashMap<&str, &str>,
+    dist: HashMap<&str, f64>,
+    exp: i32,
+) -> () {
     assert_eq!(tour(&frnds, fr_twns, dist), exp)
 }
 

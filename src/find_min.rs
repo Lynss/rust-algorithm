@@ -15,5 +15,5 @@ pub fn find_min(nums: Vec<i32>) -> i32 {
 #[test]
 pub fn test_find_min() {
     assert_eq!(find_min(vec![2, 2, 2, 0, 1]), 0);
-    assert_eq!(find_min(vec![1,3,5]), 1);
+    assert_eq!(find_min(vec![1, 3, 5]), 1);
 }

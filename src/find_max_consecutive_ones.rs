@@ -3,10 +3,10 @@ pub fn find_max_consecutive_ones(nums: Vec<i32>) -> i32 {
     let mut max_num = 0;
     let mut counter = 0;
     for current in nums {
-        if current == 1{
+        if current == 1 {
             counter += 1;
             max_num = cmp::max(max_num, counter);
-        }else{
+        } else {
             counter = 0;
         }
     }

@@ -5,7 +5,7 @@ pub fn num_tile_possibilities(tiles: String) -> i32 {
     });
     fn dfs(counter: &mut [i32]) -> i32 {
         let mut sum = 0;
-        (0..26).for_each(|i|{
+        (0..26).for_each(|i| {
             let n = counter[i];
             if n != 0 {
                 sum += 1;

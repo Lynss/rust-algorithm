@@ -14,9 +14,11 @@
 //
 fn last_digit(lst: &[u64]) -> u64 {
     let f = |x, y| std::cmp::min(x % y + y, x);
-    lst.iter().rev().fold(1, |v, &n| f(n, 20).pow(f(v, 4) as u32)) % 10
+    lst.iter()
+        .rev()
+        .fold(1, |v, &n| f(n, 20).pow(f(v, 4) as u32))
+        % 10
 }
-
 
 #[cfg(test)]
 mod tests {
@@ -36,7 +38,7 @@ mod tests {
             (vec![2, 2, 2, 0], 4),
             (vec![937640, 767456, 981242], 0),
             (vec![123232, 694022, 140249], 6),
-            (vec![499942, 898102, 846073], 6)
+            (vec![499942, 898102, 846073], 6),
         ];
 
         for test in tests {
