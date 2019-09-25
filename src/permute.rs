@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn permute(nums: Vec<i32>) -> Vec<Vec<i32>> {
     let mut result = vec![];
     if nums.len() <= 1 {

@@ -1,5 +1,5 @@
 use std::collections::HashMap;
-
+#[allow(dead_code)]
 fn tour(frnds: &[&str], fr_twns: HashMap<&str, &str>, dist: HashMap<&str, f64>) -> i32 {
     let length = fr_twns
         .iter()
@@ -19,6 +19,7 @@ fn tour(frnds: &[&str], fr_twns: HashMap<&str, &str>, dist: HashMap<&str, f64>) 
     }) as i32
 }
 
+#[allow(dead_code)]
 pub fn testing(
     frnds: &[&str],
     fr_twns: HashMap<&str, &str>,

@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn count_arrangement(n: i32) -> i32 {
     let mut used = vec![false; (n + 1) as usize];
     pub fn dfs(used: &mut Vec<bool>, pos: usize) -> i32 {

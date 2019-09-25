@@ -1,7 +1,7 @@
 use std::cell::RefCell;
 use std::rc::Rc;
 use TreeNode;
-
+#[allow(dead_code)]
 pub fn delete_node(root: Option<Rc<RefCell<TreeNode>>>, key: i32) -> Option<Rc<RefCell<TreeNode>>> {
     if root.is_some() {
         let inner = root.clone().unwrap();

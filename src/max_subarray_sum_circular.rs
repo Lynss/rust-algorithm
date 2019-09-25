@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn max_subarray_sum_circular(a: Vec<i32>) -> i32 {
     use std::cmp;
     let mut total = 0;

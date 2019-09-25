@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 fn trotter(n: i32) -> i32 {
     match n {
         0 => -1,

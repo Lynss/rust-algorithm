@@ -1,4 +1,5 @@
 use std::collections::HashMap;
+#[allow(dead_code)]
 fn produce_sum(n: i64) -> i64 {
     let sqrt = (n as f64).sqrt() as i64 + 1;
     let mut temp_vec: Vec<i64> = vec![];
@@ -14,6 +15,7 @@ fn produce_sum(n: i64) -> i64 {
     temp_vec.iter().sum::<i64>()
 }
 
+#[allow(dead_code)]
 fn buddy(start: i64, limit: i64) -> Option<(i64, i64)> {
     let mut dp = HashMap::<i64, i64>::new();
     for n in start..limit + 1 {
@@ -30,6 +32,8 @@ fn buddy(start: i64, limit: i64) -> Option<(i64, i64)> {
     }
     None
 }
+
+#[allow(dead_code)]
 fn dotest(start: i64, limit: i64, exp: Option<(i64, i64)>) -> () {
     println!("start:{}", start);
     println!("limit:{}", limit);

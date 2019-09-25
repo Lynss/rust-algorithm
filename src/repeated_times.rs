@@ -3,6 +3,7 @@ use std::collections::HashMap;
 ///4 <= A.length <= 10000
 ///0 <= A[i] < 10000
 ///A.length is even
+#[allow(dead_code)]
 pub fn repeated_n_times(a: Vec<i32>) -> i32 {
     let length = a.len();
     let n = length / 2;

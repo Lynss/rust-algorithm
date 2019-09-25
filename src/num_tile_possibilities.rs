@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn num_tile_possibilities(tiles: String) -> i32 {
     let mut counter = [0; 26];
     tiles.chars().for_each(|c| {

@@ -1,5 +1,5 @@
 use std::collections::VecDeque;
-
+#[allow(dead_code)]
 struct RecentCounter {
     queue: VecDeque<i32>,
 }

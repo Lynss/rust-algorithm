@@ -1,4 +1,5 @@
 ///思路：这里值得注意的是若有三个相等的是3*(3-1)/2对，四个相等的是4*(4-1)/2队
+#[allow(dead_code)]
 pub fn num_equiv_domino_pairs(dominoes: Vec<Vec<i32>>) -> i32 {
     let mut domino_arr = [0; 100];
     let mut result = 0;

@@ -1,5 +1,5 @@
 use regex::Regex;
-
+#[allow(dead_code)]
 pub fn mask_pii(s: String) -> String {
     if s.contains("@") {
         //email

@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn compress(chars: &mut Vec<char>) -> i32 {
     let mut before = chars[0];
     let mut counter = 1;

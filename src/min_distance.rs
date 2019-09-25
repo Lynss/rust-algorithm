@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn min_distance(word1: String, word2: String) -> i32 {
     use std::cmp;
     let word1 = word1.chars().collect::<Vec<_>>();

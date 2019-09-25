@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn flipgame(fronts: Vec<i32>, backs: Vec<i32>) -> i32 {
     use std::cmp;
     use std::collections::HashSet;

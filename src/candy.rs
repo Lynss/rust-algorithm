@@ -27,6 +27,7 @@ use std::cmp::max;
 //}
 
 /// a easier solution
+#[allow(dead_code)]
 pub fn candy(ratings: Vec<i32>) -> i32 {
     let range = ratings.len();
     let mut result = vec![1; range];

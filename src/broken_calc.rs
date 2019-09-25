@@ -1,4 +1,5 @@
-pub fn broken_calc(mut x: i32, mut y: i32) -> i32 {
+#[allow(dead_code)]
+pub fn broken_calc(x: i32, y: i32) -> i32 {
     if x >= y {
         x - y
     } else {

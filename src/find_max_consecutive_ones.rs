@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn find_max_consecutive_ones(nums: Vec<i32>) -> i32 {
     use std::cmp;
     let mut max_num = 0;

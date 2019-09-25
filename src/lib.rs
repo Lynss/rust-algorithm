@@ -1,6 +1,7 @@
 #![feature(box_patterns)]
 #![feature(is_sorted)]
 #![feature(toowned_clone_into)]
+#[allow(dead_code)]
 // Definition for a binary tree node.
 #[derive(Debug, PartialEq, Eq)]
 pub struct TreeNode {
@@ -34,6 +35,7 @@ mod bleatrix_trotter;
 mod broken_calc;
 mod bulb_switch;
 mod candy;
+mod complex_number_multiplication;
 mod count_arrangement;
 mod delete_node;
 mod find_max_consecutive_ones;
@@ -53,6 +55,5 @@ mod permute;
 mod recent_counter;
 mod repeated_times;
 mod string_compress;
-
 #[cfg(test)]
 mod tests {}

@@ -12,6 +12,7 @@
 //    }) % 10
 //}
 //
+#[allow(dead_code)]
 fn last_digit(lst: &[u64]) -> u64 {
     let f = |x, y| std::cmp::min(x % y + y, x);
     lst.iter()

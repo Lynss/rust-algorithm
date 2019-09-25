@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn is_alien_sorted(words: Vec<String>, order: String) -> bool {
     use std::collections::HashMap;
     let mut sort_map = HashMap::new();

@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn fraction_addition(expression: String) -> String {
     use std::collections::VecDeque;
     let mut operators = VecDeque::new();

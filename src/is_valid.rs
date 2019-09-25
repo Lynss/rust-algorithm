@@ -1,3 +1,4 @@
+#[allow(dead_code)]
 pub fn is_valid(code: String) -> bool {
     use regex::Regex;
     let cdata = Regex::new(r"<!\[CDATA\[.*?]]").unwrap();
