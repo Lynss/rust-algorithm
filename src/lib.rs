@@ -45,6 +45,7 @@ mod fraction_addition;
 mod help_your_granny;
 mod is_alien_sorted;
 mod is_valid;
+mod largest_perimeter_triangle;
 mod last_digit;
 mod masking_personal_information;
 mod max_subarray_sum_circular;
@@ -55,5 +56,6 @@ mod permute;
 mod recent_counter;
 mod repeated_times;
 mod string_compress;
+
 #[cfg(test)]
 mod tests {}
