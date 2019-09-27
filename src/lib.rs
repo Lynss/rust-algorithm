@@ -56,6 +56,7 @@ mod permute;
 mod recent_counter;
 mod repeated_times;
 mod string_compress;
+mod triples_with_bitwise_and_equal_to_zero;
 
 #[cfg(test)]
 mod tests {}
