@@ -53,6 +53,7 @@ mod min_distance;
 mod num_equiv_domino_pairs;
 mod num_tile_possibilities;
 mod permute;
+mod reaching_points;
 mod recent_counter;
 mod repeated_times;
 mod string_compress;
