@@ -47,6 +47,7 @@ mod is_alien_sorted;
 mod is_valid;
 mod largest_perimeter_triangle;
 mod last_digit;
+mod longest_chunked_palindrome_decomposition;
 mod masking_personal_information;
 mod max_subarray_sum_circular;
 mod min_distance;
