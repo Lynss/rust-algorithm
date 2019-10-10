@@ -58,6 +58,7 @@ mod reaching_points;
 mod recent_counter;
 mod repeated_times;
 mod string_compress;
+mod student_attendance_record_i;
 mod triples_with_bitwise_and_equal_to_zero;
 
 #[cfg(test)]
