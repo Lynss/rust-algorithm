@@ -49,6 +49,7 @@ mod largest_perimeter_triangle;
 mod last_digit;
 mod longest_chunked_palindrome_decomposition;
 mod masking_personal_information;
+mod max_chunks_to_sorted;
 mod max_subarray_sum_circular;
 mod min_distance;
 mod num_equiv_domino_pairs;
