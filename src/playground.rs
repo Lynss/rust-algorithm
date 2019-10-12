@@ -1,5 +1,5 @@
 ///用来测试部分写法是否ok，免得要找playground
 pub fn main() {
-    let test = "abc";
-    println!("{}", &test[1..3])
+    let a: i32 = 0b11101;
+    println!("{}", &a)
 }
